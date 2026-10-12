@@ -57,7 +57,8 @@ def append_column(X, col):
     # TODO: Horizontally append one 1-D feature column onto a design matrix.
     N,F=X.shape
     col=col.reshape(N,1)
-    output=np.concatenate([X,col],axis=1)
+    #output=np.concatenate([X,col],axis=1)
+    output=np.column_stack([X,col])
     return output
 
 # Step 6 - one_hot_encode (not yet solved)
