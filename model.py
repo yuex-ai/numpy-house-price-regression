@@ -83,8 +83,12 @@ def fit_standardizer(X):
     x_std=np.where(x_std==0,1.0,x_std)
     return (x_mean,x_std)
 
-# Step 8 - apply_standardizer (not yet solved)
-# TODO: implement
+# Step 8 - apply_standardizer
+def apply_standardizer(X, mean, std):
+    # TODO: Return the scaled matrix (X - mean) / std via broadcasting.
+    X=np.asarray(X,dtype=float)
+    output=(X-mean)/std
+    return output
 
 # Step 9 - add_bias_column (not yet solved)
 # TODO: implement
