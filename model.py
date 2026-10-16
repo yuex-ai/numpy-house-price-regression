@@ -141,8 +141,12 @@ def ols_predict(X, theta):
     # TODO: Predict continuous targets with a fitted linear model.
     return X@theta
 
-# Step 15 - mean_absolute_error (not yet solved)
-# TODO: implement
+# Step 15 - mean_absolute_error
+def mean_absolute_error(y_true, y_pred):
+    # TODO: return the mean absolute error between targets and predictions
+    n=len(y_true)
+    output=(1/n)*sum(np.abs(y_true-y_pred))
+    return float(output)
 
 # Step 16 - root_mean_squared_error (not yet solved)
 # TODO: implement
